@@ -1,69 +1,141 @@
 \documentclass[article]{aaltoseries}
 \usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{cleveref}
 
+\usepackage{xargs}
+\usepackage[textsize=footnotesize,obeyFinal]{todonotes}
+
+\newcommand{\todonotes}[2]{\todo[inline,color={#1}]{#2}}
+\newcommand{\note}[1]{\todonotes{green!20!white}{#1}}
+\newcommand{\warning}[1]{\todonotes{orange!20!white}{#1}}
+\newcommand{\question}[1]{\todonotes{red!20!white}{#1}}
+\newcommand{\blocking}[1]{\todonotes{red!40!white}{#1}}
+\newcommand{\grammar}[1]{\todonotes{blue!20!white}{#1}}
+
+\renewcommand{\autoref}[1]{\href{#1}{\Cref{#1}}}
 
 \begin{document}
  
 %=========================================================
 
-\title{Leveraging Function-as-a-Service (FaaS) for Edge Computing}
-
-\author{Adriaan Knapen% Your first and last name: do _not_ add your student number
-\\\textnormal{\texttt{adriaan.knapen@aalto.fi}}} % Your Aalto e-mail address
-
+\title{A Review of Adding Edge Computing to Enterprise Serverless Cloud Computing Platforms}
+\author{
+Adriaan Knapen% Your first and last name: do _not_ add your student number
+    \\\textnormal{
+        \texttt{
+            \href{mailto:adriaan.knapen@aalto.fi}{adriaan.knapen@aalto.fi}% Your Aalto e-mail address
+        }
+    }
+}
 \affiliation{\textbf{Tutor}: Gopika Premsankar} % First and last name of your tutor
-
 \maketitle
-
 %==========================================================
 
 \begin{abstract}
 
 \vspace{3mm}
-\noindent KEYWORDS: Edge Computing, Function-as-a-Service, FaaS, Serverless, Cloud Computing
+\noindent KEYWORDS: Edge Computing, Function-as-a-Service, FaaS, Serverless, Cloud Computing, Internet of Things, IoT, AWS Greengras, Google Cloud IoT Edge, Azure IoT
 
 \end{abstract}
 
-
 %============================================================
-\emph{Note: Citations are for now merely for my own reference.}
+% Should the topic be kept distinct from fog computing?
+
+% Review other framework comparison papers
+
+% Query on serverless edge computing platforms
+
+\note{This is a side note}
+\warning{This is a warning, mainly used for to-dos}
+\question{This is a non-blocking question}
+\blocking{This is a blocking question}
+\grammar{This is a grammar related question}
 
 \section{Introduction} 
-The emergence of cloud computing has been an important factor in the growing success of the Internet of Things (IoT) \cite{shi_promise_2016}.
-Mainly because the cloud allows vast amounts of data to be processed efficiently \cite{shi_promise_2016}.
-Something which is not attainable when processing the data directly on the IoT devices  \cite{shi_promise_2016}.
-Although IoT has greatly benefited from cloud solutions is it not the silver bullet. % Sentence?
-Using the cloud as the data processing backend for IoT induces several problems, like high latency and bandwidth constraints \cite{shi_edge_2016}.
-One of the methods proposed to address this issue is \emph{edge computing} \cite{shi_edge_2016}.
-Edge computing places computation resources close to the edge of the network \cite{shi_promise_2016}.
-These computing resources are called \emph{edge devices} and potentially consist of various different types of devices, ranging from devices with low computation power, like smartphones, to computationally intense specialized micro-datacenters \cite{shi_promise_2016}.
-Often is it not sufficient to merely employ edge devices, because there is no central node which has a global view of all employed edge nodes.
-The necessity of a globally accessible system for all edge devices often comes from the demand for global data mining \cite{bonomi_fog_2012}.
-One method of resolving this necessity is using cloud solutions.
-Combining edge and cloud computing has shown to be advantageous, results show that both execution speed could be increased and energy consumption could be decreased by a factor 20 \cite{chun_clonecloud:_2011}.
+The emergence of cloud computing has been an important factor in the growing success of the Internet of Things (IoT). %~\cite{shi_promise_2016}.
+This is mainly because the cloud allows vast amounts of data to be processed efficiently, something which is not attainable when processing the data directly on the IoT devices~\cite{shi_promise_2016}.
+Although IoT has greatly benefited from cloud solutions, but it also introduces various limitations.
+Using the cloud as the data processing backend for IoT introduces several problems, including high latency and bandwidth constraints. %~\cite{shi_edge_2016}.
+One of the methods proposed to address this issue is \emph{edge computing}~\cite{shi_edge_2016}.
+Edge computing places computation resources at the edge of the network, that is, close to the end user and her devices and within the same local area network.
+These computing resources are called \emph{edge devices} and potentially consist of various different types of devices, ranging from devices with low computation power, such as smartphones, to computationally intense specialized micro-datacenters~\cite{shi_promise_2016}.
+Edge devices allow other devices in its near proximity to use the resources available at the edge device instead of the cloud.
 
-Within the wide range of cloud solutions is the serverless paradigm, also known as Function-as-a-Service (FaaS), gaining rapid adoption \cite{.
+However, often it is not sufficient to merely employ edge devices, because there is no central node which has a global view of all employed edge nodes.
+The necessity of a globally accessible system for all edge devices often comes from the demand for global data mining~\cite{bonomi_fog_2012}.
+One method of addressing this necessity is using cloud solutions.
+Combining edge and cloud computing has shown to be advantageous.
+Employing such combination of edge and cloud has been shown to increase the execution speed and decrease in energy consumption by a factor of 20~\cite{chun_clonecloud:_2011} compared to merely using cloud solutions.
 
-%============================================================
-\section{Methodology}
+Previous research has proposed combining edge computing with a serverless cloud solution~\cite{de_paoli_empowering_2017, glikson_deviceless_2017, nastic_serverless_2017}.
+The serverless paradigm, also known as Function-as-a-Service (FaaS), offers a platform which executes user-defined functions on automatically managed distributed platforms~\cite{nastic_serverless_2017}.
+Several platforms which support serverless edge computing have emerged, such as AWS Greengrass, Google Cloud IoT Edge and Azure IoT. % @todo find citation/source
+To our best knowledge, no previous research has conducted an analysis on the enterprise serverless edge computing platforms.
+This paper provides an overview of and feature analysis comparison on the three different platforms discussed above. % @todo add rationale behind the selection of platforms
 
-%============================================================
-\section{Results}
-
-
-
-%============================================================
-\section{Discussion}
-
-
-%============================================================
-\section{Conclusion}
-
-
+The remainder of this paper consists of the following sections.
+In \autoref{sec:use-cases} we will discuss various use cases of adding edge computing to public clouds with a serverless architecture.
+Then \autoref{sec:overview} introduces the various different cloud platforms. % and their suggested use cases.
+\autoref{sec:feature-selection} presents the features which will be used to compare the different platforms with.
+In \autoref{sec:feature-comparison} we will compare the platforms based on the features defined in previous section.
+Lastly \autoref{sec:discussion-conclusion} concludes this paper with a discussion on the findings and proposes some future areas of research.
 
 %============================================================
+\section{Use Case Analysis}\label{sec:use-cases}
+\subsection{Mobile Augmented Reality} % Empowering Low-Latency Applications 
+Research done in \cite{de_paoli_empowering_2017} suggests using serverless edge computing for augmented reality (AR) on mobile devices.
+They propose a solution to leveraging these edge nodes to capture features from images captured by the user's mobile device.
+Specifically is the mentioned use case focused on helping tourists whom are visiting a city by giving relevant information for Points-of-Interest by looking at them using mobile devices.
+The edge node then augments the received visual using various methods, e.g., by adding relevant information, modifying the content of the image or adding virtual elements.
+
+Using edge computing to address this issue is particularly useful, since the computation intensive nature of feature extraction from the images requires significant amount of resources.
+Although using a cloud solution instead of the proposed edge solution would solve the resource constraint problem, however does the cloud induce some negative side effects degrading the user experience, as a result of high latency, possible unstable connections and vast amounts of bandwidth usage.
+Using an edge computation node addresses all these problems, hence making edge computing superior over cloud computing for this use case.
+In addition does feature identification on images not induce statefulness between different computations, hence suitable for serverless edge computing.
+
+\subsection{Online shopping} % Not serverless: The Promise of Edge Computing
+\blocking{Source~\cite{shi_promise_2016} doesn't use serverless but merely relates to edge computing. Can I make the argument that this is also a use case for serverless myself?}
+
+\subsection{Finding a missing child}% Not serverless: The Promise of Edge Computing
+\blocking{Source~\cite{shi_promise_2016} doesn't use serverless but merely relates to edge computing. Can I make the argument that this is also a use case for serverless myself?}
+
+%============================================================
+\section{Overview of Enterprise Serverless Edge Computing Platforms}\label{sec:overview}
+\note{Maybe also include suggested use cases for the platforms}
+
+\subsection{AWS Greengrass}
+AWS Greengrass is part of the Amazon Web Services (AWS) suite and allows local execution of AWS serverless cloud platform AWS Lambda. \grammar{Correct use of suite?}
+Greengrass introduces the Greengrass Core (GGC) runtime, which can even be deployed on low powered devices, for example, a Raspberry Pi, on the edge of the network.
+These edge nodes allow other devices using Amazon FreeRTOS or IoT Device SDK to run the same functions as they would have done on AWS Lambda on the GGC node.
+For this core node is it not required to be continuously connected to the AWS cloud, because the node will still allow execution of AWS Lambda on the locally available data.
+When the connection is restored will the core node automatically synchronize its data with the cloud and retrieve all available over the air updates~\cite{amazon_aws_nodate}. \note{Get proper citations for websites}
+
+\subsection{Google Cloud IoT Edge}
 
 
+\subsection{Azure IoT}
+
+%============================================================
+\section{Selection of Features for Comparison}\label{sec:feature-selection}
+
+
+\begin{itemize}
+    \item Supports serverless at the edge
+    \item Minimum hardware requirements for edge nodes
+    \item Orchestration
+    \item Available offline
+    \item (Subset of) features proposed in \cite{lynn_preliminary_2017}
+\end{itemize}
+
+%============================================================
+\section{Feature Comparison}\label{sec:feature-comparison}
+
+%============================================================
+\section{Discussion \& Conclusion}\label{sec:discussion-conclusion}
+
+%============================================================
+\newpage
 \bibliographystyle{plain}
 \bibliography{edge-computing}
 
