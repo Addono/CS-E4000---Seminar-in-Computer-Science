@@ -160,19 +160,6 @@
 	file = {Taleb et al. - 2017 - On Multi-Access Edge Computing A Survey of the Em.pdf:C\:\\Users\\Adriaan\\Zotero\\storage\\GEZ696JH\\Taleb et al. - 2017 - On Multi-Access Edge Computing A Survey of the Em.pdf:application/pdf}
 }
 
-@inproceedings{lara_poster_2016,
-	title = {Poster {Abstract}: {Hierarchical} {Serverless} {Computing} for the {Mobile} {Edge}},
-	shorttitle = {Poster {Abstract}},
-	doi = {10.1109/SEC.2016.37},
-	abstract = {EdgeScale is a new platform that leverages serveless cloud computing to enable storage and processing on a hierarchy of data centers positioned over the geographic span of a network between the end-user device and the traditional wide-area cloud datacenter. EdgeScale applications are structured as lightweight stateless handlers that can be rapidely instantiated on demand. EdgeScale provides a scalable and persistent storage service that automatically migrates application state across the data center hierarchy to optimize access latency and reduce bandwidth consumption.},
-	booktitle = {2016 {IEEE}/{ACM} {Symposium} on {Edge} {Computing} ({SEC})},
-	author = {Lara, E. d and Gomes, C. S. and Langridge, S. and Mortazavi, S. H. and Roodi, M.},
-	month = oct,
-	year = {2016},
-	keywords = {Bandwidth, cloud computing, Cloud computing, data processing, edge computing, access latency optimization, bandwidth consumption, cloudlets, Computer architecture, computer centres, data center hierarchy, data storage, EdgeScale applications, end-user device, geographic span, Hardware, hierarchical serverless cloud computing, lightweight stateless handlers, Mobile communication, mobile computing, mobile edge, serverless computing, Servers, storage management, storage service},
-	pages = {109--110}
-}
-
 @inproceedings{xu_eaaas:_2017,
 	address = {Honolulu, HI, USA},
 	title = {{EAaaS}: {Edge} {Analytics} as a {Service}},
@@ -208,6 +195,7 @@
 	title = {An evaluation of open source serverless computing frameworks},
 	abstract = {Recent advancements in virtualization and software architecture have led to the new paradigm of serverless computing, which allows developers to deploy applications as stateless functions without worrying about the underlying infrastructure. Accordingly, a serverless platform handles the lifecycle, execution and scaling of the actual functions; these need to run only when invoked or triggered by an event. Thus, the major beneﬁts of serverless computing are low operational concerns and efﬁcient resource management and utilization. Serverless computing is currently offered by several public cloud service providers. However, there are certain limitations on the public cloud platforms, such as vendor lock-in and restrictions on the computation of the functions. Open source serverless frameworks are a promising solution to avoid these limitations and bring the power of serverless computing to on-premise deployments. However, these frameworks have not been evaluated before. Thus, we carry out a comprehensive feature comparison of popular open source serverless computing frameworks. We then evaluate the performance of selected frameworks: Fission, Kubeless and OpenFaaS. Speciﬁcally, we characterize the response time and ratio of successfully received responses under different loads and provide insights into the design choices of each framework.},
 	language = {en},
+	urldate = {2018-11-22},
 	author = {Mohanty, Sunil Kumar and Premsankar, Gopika and Francesco, Mario Di},
 	pages = {7},
 	file = {Mohanty et al. - An evaluation of open source serverless computing .pdf:C\:\\Users\\Adriaan\\Zotero\\storage\\ZGQL9E84\\Mohanty et al. - An evaluation of open source serverless computing .pdf:application/pdf}
@@ -233,12 +221,12 @@
 
 @misc{amazon_aws_nodate,
 	title = {{AWS} {Greengrass} - {Amazon} {Web} {Services}},
-	howpublished = {\url{https://aws.amazon.com/greengrass/}},
-	note = {Accessed 2018-10-29},
+	url = {https://aws.amazon.com/greengrass/},
 	language = {en-US},
 	urldate = {2018-10-29},
 	journal = {Amazon Web Services, Inc.},
 	author = {Amazon},
+	note = {Accessed on 29/10/2018},
 	file = {Snapshot:C\:\\Users\\Adriaan\\Zotero\\storage\\8CKQ8PW9\\greengrass.html:text/html}
 }
 
@@ -252,4 +240,182 @@
 	month = jan,
 	year = {2016},
 	file = {Full Text PDF:C\:\\Users\\Adriaan\\Zotero\\storage\\PQBKES66\\Chiang - 2016 - Fog Networking An Overview on Research Opportunit.pdf:application/pdf;Snapshot:C\:\\Users\\Adriaan\\Zotero\\storage\\JWPGLWGF\\1601.html:text/html}
+}
+
+@inproceedings{aske_supporting_2018,
+	address = {Eugene, OR, USA},
+	title = {Supporting {Multi}-{Provider} {Serverless} {Computing} on the {Edge}},
+	isbn = {978-1-4503-6523-9},
+	url = {http://dl.acm.org/citation.cfm?doid=3229710.3229742},
+	doi = {10.1145/3229710.3229742},
+	abstract = {Serverless computing has recently emerged as a new execution model for cloud computing, in which service providers offer compute runtimes, also known as Function-as-a-Service (FaaS) platforms, allowing users to develop, execute and manage application functionalities. Following the rapid adoption of FaaS technologies and the introduction of numerous self hosted FaaS systems, the need for real time monitoring and scheduling of functions in an ecosystem of providers has become critical. In this paper, we present MPSC, a framework for supporting Multi-Provider Serverless Computing. MPSC monitors the performance of serverless providers in real time, and schedules applications across these providers. In addition, MPSC also provides APIs for users to define their own scheduling algorithms. When compared to scheduling on a single cloud resource MPSC provides a 4X speedup across multiple providers in a volatile edge computing environment.},
+	language = {en},
+	urldate = {2018-11-07},
+	booktitle = {Proceedings of the 47th {International} {Conference} on {Parallel} {Processing} {Companion}  - {ICPP} '18},
+	publisher = {ACM Press},
+	author = {Aske, Austin and Zhao, Xinghui},
+	year = {2018},
+	pages = {1--6},
+	file = {Aske and Zhao - 2018 - Supporting Multi-Provider Serverless Computing on .pdf:C\:\\Users\\Adriaan\\Zotero\\storage\\3XSJCLQ6\\Aske and Zhao - 2018 - Supporting Multi-Provider Serverless Computing on .pdf:application/pdf}
+}
+
+@inproceedings{persson_kappa:_2017,
+	address = {Las Vegas, Nevada},
+	title = {Kappa: serverless {IoT} deployment},
+	isbn = {978-1-4503-5434-9},
+	shorttitle = {Kappa},
+	url = {http://dl.acm.org/citation.cfm?doid=3154847.3154853},
+	doi = {10.1145/3154847.3154853},
+	abstract = {A recent evolution in cloud computing is the move to serverless applications, where the separation between the server platform and the application is complete, and developers can fully focus on the application, leaving all provisioning details to a cloud provider. In this paper we look at how the serverless computing model can be adopted all the way to the edge devices using the Kappa framework, built on the Calvin platform for distributed cloud and IoT applications. Combining the resource management of the platform, where capabilities of nodes are matched with the requirements of the execution units, with a RESTful API it is possible to build an IoT system with a straightforward intuitive interface while still retaining the flexibility of the Calvin platform. We also give examples of how the framework can be used in an industrial IoT setting.},
+	language = {en},
+	urldate = {2018-11-07},
+	booktitle = {Proceedings of the 2nd {International} {Workshop} on {Serverless} {Computing}  - {WoSC} '17},
+	publisher = {ACM Press},
+	author = {Persson, Per and Angelsmark, Ola},
+	year = {2017},
+	pages = {16--21},
+	file = {Persson and Angelsmark - 2017 - Kappa serverless IoT deployment.pdf:C\:\\Users\\Adriaan\\Zotero\\storage\\Z683D52K\\Persson and Angelsmark - 2017 - Kappa serverless IoT deployment.pdf:application/pdf}
+}
+
+@article{gorlatova_characterizing_2018,
+	title = {Characterizing {Task} {Completion} {Latencies} in {Fog} {Computing}},
+	url = {http://arxiv.org/abs/1811.02638},
+	abstract = {Fog computing, which distributes computing resources to multiple locations between the Internet of Things (IoT) devices and the cloud, is attracting considerable attention from academia and industry. Yet, despite the excitement about the potential of fog computing, few comprehensive quantitative characteristics of the properties of fog computing architectures have been conducted. In this paper we examine the properties of task completion latencies in fog computing. First, we present the results of our empirical benchmarking-based study of task completion latencies. The study covered a range of settings, and uniquely considered both traditional and serverless fog computing execution points. It demonstrated the range of execution point characteristics in different locations and the relative stability of latency characteristics for a given location. It also highlighted properties of serverless execution that are not incorporated in existing fog computing algorithms. Second, we present a framework we developed for co-optimizing task completion quality and latency, which was inspired by the insights of our empirical study. We describe fog computing task assignment problems we formulated under this framework, and present the algorithms we developed for solving them.},
+	urldate = {2018-11-13},
+	journal = {arXiv:1811.02638 [cs]},
+	author = {Gorlatova, Maria and Inaltekin, Hazer and Chiang, Mung},
+	month = nov,
+	year = {2018},
+	note = {arXiv: 1811.02638},
+	keywords = {Computer Science - Distributed, Parallel, and Cluster Computing, Computer Science - Networking and Internet Architecture},
+	file = {arXiv\:1811.02638 PDF:C\:\\Users\\Adriaan\\Zotero\\storage\\5Y7FBABQ\\Gorlatova et al. - 2018 - Characterizing Task Completion Latencies in Fog Co.pdf:application/pdf;arXiv.org Snapshot:C\:\\Users\\Adriaan\\Zotero\\storage\\JYXBR7RA\\1811.html:text/html}
+}
+
+@misc{microsoft_what_nodate,
+	title = {What is {Azure} {IoT} {Edge}},
+	url = {https://docs.microsoft.com/en-us/azure/iot-edge/about-iot-edge},
+	abstract = {Overview of the Azure IoT Edge service},
+	language = {en-us},
+	urldate = {2018-11-14},
+	author = {Microsoft},
+	note = {Accessed on 14/11/2018},
+	file = {Snapshot:C\:\\Users\\Adriaan\\Zotero\\storage\\SHCCZDIT\\about-iot-edge.html:text/html}
+}
+
+@misc{microsoft_creating_nodate,
+	title = {Creating the ‘intelligent edge’ with {Azure} {IoT} {Edge}},
+	url = {https://channel9.msdn.com/Shows/Internet-of-Things-Show/Creating-the-intelligent-edge-with-Azure-IoT-Edge},
+	abstract = {Chipalo and Olivier discuss Azure IoT Edge, a new service that allows you to deploy cloud intelligence such as machine learning or AI to run on local IoT devices. Go to the IoT Edge product page to le},
+	language = {en},
+	urldate = {2018-11-14},
+	journal = {Channel 9},
+	author = {Microsoft},
+	note = {Accessed on 14/11/2018},
+	file = {Snapshot:C\:\\Users\\Adriaan\\Zotero\\storage\\PP4N98GI\\Creating-the-intelligent-edge-with-Azure-IoT-Edge.html:text/html}
+}
+
+@misc{google_cloud_nodate,
+	title = {Cloud {IoT} {Edge} - {Extending} {Google} {Cloud}'s {AI} \& {ML}},
+	url = {https://cloud.google.com/iot-edge/},
+	abstract = {Intelligent software for edge extending Google Cloud\&rsquo;s AI and ML to gateways and connected devices. Run your edge IoT application securely and at scale.},
+	language = {en},
+	urldate = {2018-11-14},
+	journal = {Google Cloud},
+	author = {Google},
+	note = {Accessed on 14/11/2018},
+	file = {Snapshot:C\:\\Users\\Adriaan\\Zotero\\storage\\52GVZTB6\\iot-edge.html:text/html}
+}
+
+@misc{google_edge_nodate,
+	title = {Edge {TPU} - {Run} {Inference} at the {Edge}},
+	url = {https://cloud.google.com/edge-tpu/},
+	abstract = {Custom ASIC designed to run inference at the edge. Delivers high performance per watt at small footprint, enabling machine learning deployment for edge applications.},
+	language = {en},
+	urldate = {2018-11-14},
+	journal = {Google Cloud},
+	author = {Google},
+	note = {Accessed on 14/11/2018},
+	file = {Snapshot:C\:\\Users\\Adriaan\\Zotero\\storage\\S37YEBQK\\edge-tpu.html:text/html}
+}
+
+@misc{vodafone_saguna_aws_&_tensoriot_driver_2018,
+	title = {Driver {Monitoring}},
+	shorttitle = {Driver {Monitoring}},
+	url = {http://www.tensoriot.com/assets/safe_driving.pdf},
+	language = {English},
+	urldate = {2018-11-17},
+	author = {Vodafone, Saguna, AWS \& TensorIoT},
+	month = feb,
+	year = {2018},
+	file = {safe_driving.pdf:C\:\\Users\\Adriaan\\Zotero\\storage\\LR2PQFAK\\safe_driving.pdf:application/pdf}
+}
+
+@misc{amazon_customizing_nodate,
+	title = {Customizing {Content} at the {Edge} with {Lambda}@{Edge}},
+	url = {https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-at-the-edge.html},
+	urldate = {2018-11-17},
+	author = {Amazon},
+	note = {Accessed on 17/11/2018},
+	file = {Customizing Content at the Edge with Lambda@Edge - Amazon CloudFront:C\:\\Users\\Adriaan\\Zotero\\storage\\CDKA9CHB\\lambda-at-the-edge.html:text/html}
+}
+
+@article{das_edgebench:_2018,
+	title = {{EdgeBench}: {Benchmarking} {Edge} {Computing} {Platforms}},
+	shorttitle = {{EdgeBench}},
+	url = {http://arxiv.org/abs/1811.05948},
+	abstract = {The emerging trend of edge computing has led several cloud providers to release their own platforms for performing computation at the 'edge' of the network. We compare two such platforms, Amazon AWS Greengrass and Microsoft Azure IoT Edge, using a new benchmark comprising a suite of performance metrics. We also compare the performance of the edge frameworks to cloud-only implementations available in their respective cloud ecosystems. Amazon AWS Greengrass and Azure IoT Edge use different underlying technologies, edge Lambda functions vs. containers, and so we also elaborate on platform features available to developers. Our study shows that both of these edge platforms provide comparable performance, which nevertheless differs in important ways for key types of workloads used in edge applications. Finally, we discuss several current issues and challenges we faced in deploying these platforms.},
+	urldate = {2018-11-21},
+	journal = {arXiv:1811.05948 [cs]},
+	author = {Das, Anirban and Patterson, Stacy and Wittie, Mike P.},
+	month = nov,
+	year = {2018},
+	note = {arXiv: 1811.05948},
+	keywords = {Computer Science - Distributed, Parallel, and Cluster Computing, Computer Science - Networking and Internet Architecture},
+	annote = {Comment: 6 pages, 5 figures, Fourth International Workshop on Serverless Computing (WoSC) 2018},
+	file = {arXiv\:1811.05948 PDF:C\:\\Users\\Adriaan\\Zotero\\storage\\EQEE6PQZ\\Das et al. - 2018 - EdgeBench Benchmarking Edge Computing Platforms.pdf:application/pdf;arXiv.org Snapshot:C\:\\Users\\Adriaan\\Zotero\\storage\\BD64Y4N9\\1811.html:text/html}
+}
+
+@inproceedings{lara_poster_2016,
+	title = {Poster {Abstract}: {Hierarchical} {Serverless} {Computing} for the {Mobile} {Edge}},
+	shorttitle = {Poster {Abstract}},
+	doi = {10.1109/SEC.2016.37},
+	abstract = {EdgeScale is a new platform that leverages serveless cloud computing to enable storage and processing on a hierarchy of data centers positioned over the geographic span of a network between the end-user device and the traditional wide-area cloud datacenter. EdgeScale applications are structured as lightweight stateless handlers that can be rapidely instantiated on demand. EdgeScale provides a scalable and persistent storage service that automatically migrates application state across the data center hierarchy to optimize access latency and reduce bandwidth consumption.},
+	booktitle = {2016 {IEEE}/{ACM} {Symposium} on {Edge} {Computing} ({SEC})},
+	author = {Lara, E. d and Gomes, C. S. and Langridge, S. and Mortazavi, S. H. and Roodi, M.},
+	month = oct,
+	year = {2016},
+	keywords = {Bandwidth, cloud computing, Cloud computing, data processing, edge computing, access latency optimization, bandwidth consumption, cloudlets, Computer architecture, computer centres, data center hierarchy, data storage, EdgeScale applications, end-user device, geographic span, Hardware, hierarchical serverless cloud computing, lightweight stateless handlers, Mobile communication, mobile computing, mobile edge, serverless computing, Servers, storage management, storage service},
+	pages = {109--110},
+	file = {IEEE Xplore Abstract Record:C\:\\Users\\Adriaan\\Zotero\\storage\\L4VPDZ3Y\\7774691.html:text/html;IEEE Xplore Full Text PDF:C\:\\Users\\Adriaan\\Zotero\\storage\\Y67XEY2C\\Lara et al. - 2016 - Poster Abstract Hierarchical Serverless Computing.pdf:application/pdf}
+}
+
+@misc{the_apache_software_foundation_apache_nodate,
+	title = {Apache {OpenWhisk} is a serverless, open source cloud platform},
+	url = {https://openwhisk.apache.org/},
+	urldate = {2018-11-22},
+	author = {The Apache Software Foundation},
+	note = {Accessed on 22/11/2018},
+	file = {Apache OpenWhisk is a serverless, open source cloud platform:C\:\\Users\\Adriaan\\Zotero\\storage\\WM7SYIBH\\openwhisk.apache.org.html:text/html}
+}
+
+@misc{microsoft_iot_2018,
+	title = {{IoT} {Edge} {\textbar} {Microsoft} {Azure}},
+	url = {https://azure.microsoft.com/en-us/services/iot-edge/},
+	abstract = {Connect cloud intelligence to your edge devices with Azure IoT Edge, a comprehensive service that deploys artificial intelligence and custom logic to all IoT devices.},
+	language = {en},
+	urldate = {2018-11-28},
+	author = {Microsoft},
+	year = {2018},
+	note = {Accessed on 28/11/2018},
+	file = {Snapshot:C\:\\Users\\Adriaan\\Zotero\\storage\\SX7DA8P6\\iot-edge.html:text/html}
+}
+
+@misc{ibm_cloud_2018,
+	title = {Cloud {Functions} - {Overview} {\textbar} {IBM}},
+	url = {https://www.ibm.com/cloud/functions},
+	urldate = {2018-11-30},
+	author = {IBM},
+	year = {2018},
+	note = {Accessed on 30/11/2018},
+	file = {Cloud Functions - Overview | IBM:C\:\\Users\\Adriaan\\Zotero\\storage\\ZRBLGFQB\\functions.html:text/html}
 }
